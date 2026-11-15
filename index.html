@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#edf1ee">
+  <title>Bible 101</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <div><p>Complete EPUB reader</p><h1>Bible 101</h1><span>From Genesis and Psalms to the Gospels and Revelation</span></div>
+    <label class="size-control"><span>Card size</span><input id="cardSize" type="range" min="210" max="380" value="270"></label>
+  </header>
+  <details id="tocPanel" class="toc-panel">
+    <summary>Table of contents</summary><div id="tableOfContents" class="toc-content"></div>
+  </details>
+  <section class="search-row">
+    <label class="search-box"><span>Search</span><input id="searchInput" type="search" placeholder="Search chapters, books, people, places, or text"></label>
+    <span id="searchStatus" class="search-status">Search all book text</span>
+  </section>
+  <section id="searchResults" class="search-results" aria-label="Search results"></section>
+  <main id="chapterGrid" class="chapter-grid"></main>
+  <button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
+  <div id="reader" class="reader" aria-hidden="true">
+    <header class="reader-toolbar">
+      <button id="prevSection" type="button" aria-label="Previous section">‹</button>
+      <div><small id="readerGroup"></small><strong id="readerTitle"></strong></div>
+      <div class="reader-actions"><button id="fontDown" type="button" aria-label="Smaller text">A−</button><span id="fontLabel">100%</span><button id="fontUp" type="button" aria-label="Larger text">A+</button><button id="closeReader" type="button" aria-label="Close">×</button></div>
+      <button id="nextSection" type="button" aria-label="Next section">›</button>
+    </header>
+    <iframe id="readerFrame" title="Book section"></iframe>
+  </div>
+  <script src="book-data.js?v=1"></script><script src="viewer.js?v=1"></script>
+</body>
+</html>
